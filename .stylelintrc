@@ -1,0 +1,34 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recess-order"
+  ],
+  "rules": {
+    "indentation": 2,
+    "color-hex-case": "lower",
+    "color-hex-length": "short",
+    "color-named": "never",
+    "color-no-invalid-hex": true,
+    "function-comma-space-after": "always-single-line",
+    "function-comma-space-before": "never",
+    "number-leading-zero": "never",
+    "number-no-trailing-zeros": true,
+    "string-no-newline": true,
+    "string-quotes": "double",
+    "length-zero-no-unit": true,
+    "unit-case": "lower",
+    "unit-no-unknown": true,
+    "value-no-vendor-prefix": true,
+    "value-list-comma-newline-after": "always-multi-line",
+    "value-list-comma-space-after": "always-single-line",
+    "value-list-comma-space-before": "never",
+    "shorthand-property-no-redundant-values": true,
+    "property-case": "lower",
+    "property-no-vendor-prefix": true,
+    "declaration-bang-space-after": "never",
+    "declaration-bang-space-before": "always",
+    "declaration-colon-newline-after": "always-multi-line",
+    "declaration-colon-space-after": "always-single-line",
+    "declaration-colon-space-before": "never"
+  }
+}

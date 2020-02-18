@@ -7,7 +7,7 @@
 
 <script>
 import Vue from 'vue';
-export default Vue.component('search-form', {
+export default Vue.extend('search-form', {
   data: () => ({ text: 'test' })
 });
 </script>
