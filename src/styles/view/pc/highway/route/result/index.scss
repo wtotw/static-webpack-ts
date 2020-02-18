@@ -1,0 +1,19 @@
+//--------------------------
+// setting
+//--------------------------
+@charset "UTF-8";
+
+//--------------------------
+// import
+//--------------------------
+@import "@styles/common/partial/_color";
+
+body {
+  display: flex;
+  width: 1080px;
+  background-color: $color_bg_white;
+
+  div.main-content {
+    display: grid;
+  }
+}
