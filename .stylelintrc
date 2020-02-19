@@ -4,9 +4,17 @@
   ],
   "extends": [
     "stylelint-config-standard",
+    "stylelint-config-airbnb",
     "stylelint-config-recess-order"
   ],
+  "ignore": [
+    "**/node_modules/**"
+  ],
   "rules": {
+    // For SCSS
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    // Other
     "indentation": 2,
     "color-hex-case": "lower",
     "color-hex-length": "short",
@@ -17,7 +25,7 @@
     "number-leading-zero": "never",
     "number-no-trailing-zeros": true,
     "string-no-newline": true,
-    "string-quotes": "double",
+    "string-quotes": "single",
     "length-zero-no-unit": true,
     "unit-case": "lower",
     "unit-no-unknown": true,
