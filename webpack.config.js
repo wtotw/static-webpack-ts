@@ -17,6 +17,7 @@ const { VueLoaderPlugin } = require('vue-loader');
 // Define
 const mode = process.env.NODE_ENV || 'development';
 const isProduction = process.env.NODE_ENV === 'production';
+console.log(`mode: ${mode}`);
 
 // エントリーファイルをディレクトリ構成ごと取得
 const entry = {};
@@ -110,12 +111,7 @@ module.exports = {
     minimizer: [
       new TerserPlugin({
         extractComments: 'all',
-        terserOptions: {
-          compress: {
-            cache: true,
-            drop_console: true
-          }
-        }
+        cache: true
       })
     ]
   },
@@ -183,12 +179,6 @@ if (isProduction) {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false
       }
     }),
     new webpack.LoaderOptionsPlugin({
