@@ -1,0 +1,53 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json",
+    "extraFileExtensions": [
+      ".vue"
+    ]
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "vue"
+  ],
+  "extends": [
+    "airbnb-base",
+    "plugin:vue/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:vue/essential"
+  ],
+  "rules": {
+    "quotes": [2, "single", {"avoidEscape": true, "allowTemplateLiterals": true}],
+    "arrow-body-style": "warn",
+    "arrow-parens": "warn",
+    "arrow-spacing": "warn",
+    "comma-dangle": "off",
+    "no-console": "warn",
+    "generator-star-spacing": "warn",
+    "no-duplicate-imports": "error",
+    "no-unused-vars": ["warn", {"args": "none"}],
+    "no-useless-computed-key": "warn",
+    "no-useless-constructor": "warn",
+    "no-useless-rename": "warn",
+    "no-var": "error",
+    "object-shorthand": "error",
+    "prefer-arrow-callback": "warn",
+    "prefer-const": "warn",
+    "prefer-rest-params": "warn",
+    "prefer-spread": "warn",
+    "prefer-template": "warn",
+    "rest-spread-spacing": "warn",
+    "semi": "error",
+    "template-curly-spacing": "warn",
+    "yield-star-spacing": "warn"
+  }
+}

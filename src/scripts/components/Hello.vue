@@ -1,33 +1,41 @@
 <template>
   <div>
-    <div class="greeting">Hello {{name}}{{exclamationMarks}}</div>
-    <button @click="decrement">-</button>
-    <button @click="increment">+</button>
+    <div class="greeting">
+      Hello {{ name }}{{ exclamationMarks }}
+    </div>
+    <button @click="decrement">
+      -
+    </button>
+    <button @click="increment">
+      +
+    </button>
   </div>
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from "vue-property-decorator";
+import { Vue, Component, Prop } from 'vue-property-decorator';
 
 @Component
 export default class HelloDecorator extends Vue {
-    @Prop() name!: string;
-    @Prop() initialEnthusiasm!: number;
+  @Prop() name!: string;
 
-    enthusiasm = this.initialEnthusiasm;
+  @Prop() initialEnthusiasm!: number;
 
-    increment() {
-        this.enthusiasm++;
-    }
-    decrement() {
-        if (this.enthusiasm > 1) {
-            this.enthusiasm--;
-        }
-    }
+  enthusiasm = this.initialEnthusiasm;
 
-    get exclamationMarks(): string {
-        return Array(this.enthusiasm + 1).join('!');
+  increment = (): void => {
+    this.enthusiasm += 1;
+  }
+
+  decrement = (): void => {
+    if (this.enthusiasm > 1) {
+      this.enthusiasm -= 1;
     }
+  }
+
+  get exclamationMarks(): string {
+    return Array(this.enthusiasm + 1).join('!');
+  }
 }
 </script>
 
