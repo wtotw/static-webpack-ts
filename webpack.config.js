@@ -38,6 +38,7 @@ for (const file of cssFiles) {
 
 module.exports = {
   mode,
+  devtool: !isProduction ? 'source-map' : false,
   entry,
   output: {
     filename: '[name].js',
@@ -170,19 +171,4 @@ module.exports = {
     // Vue Loader
     new VueLoaderPlugin()
   ]
-}
-
-if (isProduction) {
-  module.exports.devtool = '#source-map'
-  // http://vue-loader.vuejs.org/en/workflow/production.html
-  module.exports.plugins = (module.exports.plugins || []).concat([
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
-      }
-    }),
-    new webpack.LoaderOptionsPlugin({
-      minimize: true
-    })
-  ])
 }
