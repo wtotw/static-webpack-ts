@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "watch": "NODE_ENV=development webpack --watch",
-    "build-dev": "NODE_ENV=development webpack",
-    "build-prd": "NODE_ENV=production webpack",
-    "stylelint-fix": "stylelint ./src/**/*.scss --fix"
+    "build": "NODE_ENV=development webpack",
+    "release": "NODE_ENV=production webpack",
+    "stylelint": "stylelint --fix ./src/**/*.scss"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,8 @@
     "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
+    "prettier": "^1.19.1",
+    "prettier-stylelint": "^0.4.2",
     "sass-loader": "^8.0.2",
     "stylelint": "^13.2.0",
     "stylelint-config-airbnb": "0.0.0",

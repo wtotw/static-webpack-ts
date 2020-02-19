@@ -11,10 +11,8 @@
     "**/node_modules/**"
   ],
   "rules": {
-    // For SCSS
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
-    // Other
     "indentation": 2,
     "color-hex-case": "lower",
     "color-hex-length": "short",
