@@ -5,7 +5,7 @@
   // List of extensions which should be recommended for users of this workspace.
   "recommendations": [
     "dbaeumer.vscode-eslint",
-    "shinnn.stylelint",
+    "stylelint.vscode-stylelint",
     "octref.vetur",
     "esbenp.prettier-vscode"
   ],
