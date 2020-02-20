@@ -39,12 +39,13 @@ export default class HelloDecorator extends Vue {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .greeting {
   font-size: 20px;
 
   .test {
     display: inline;
+    background-color: $color_bg_white;
   }
 }
 </style>

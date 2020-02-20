@@ -85,6 +85,12 @@ module.exports = merge(common, {
           },
           {
             loader: 'sass-loader'
+          },
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              resources: [`${path.resolve(__dirname, config.path.src.styles.common, 'partial/**/*.scss')}`]
+            }
           }
         ]
       }
