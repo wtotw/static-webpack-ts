@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "NODE_ENV=development webpack --config webpack.config.scripts.js --watch & NODE_ENV=development webpack --config webpack.config.styles.js --watch",
     "build": "NODE_ENV=development webpack --config webpack.config.scripts.js && NODE_ENV=development webpack --config webpack.config.styles.js",
-    "release": "NODE_ENV=production webpack --config webpack.config.scripts.js && NODE_ENV=development webpack --config webpack.config.styles.js",
+    "release": "NODE_ENV=production webpack --config webpack.config.scripts.js && NODE_ENV=production webpack --config webpack.config.styles.js",
     "stylelint": "stylelint --fix ./src/**/*.scss",
     "eslint": "eslint --fix ./src/**/*.ts"
   },

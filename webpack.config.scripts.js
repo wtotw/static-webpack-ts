@@ -121,7 +121,7 @@ module.exports = merge(common, {
               browsers: [
                 'last 2 versions',
                 'ie >= 11',
-                'Android >= 4'
+                'Android >= 5'
               ]
             },
             // ライセンスも含めて、コメントを全て削除する
