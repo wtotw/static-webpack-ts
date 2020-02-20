@@ -137,7 +137,10 @@ module.exports = {
         from: `${config.path.src.html}`,
         to: 'html'
       }
-    ]),
+    ],
+    {
+      copyUnmodified: true
+    }),
     new OptimizeCSSAssetsPlugin({
       cssProcessorPluginOptions: {
         preset: ['default',
