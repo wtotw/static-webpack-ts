@@ -9,15 +9,12 @@ const glob = require('glob');
 
 // Plugins
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const { VueLoaderPlugin } = require('vue-loader');
 
 // Define
-const mode = process.env.NODE_ENV || 'development';
 const isProduction = process.env.NODE_ENV === 'production';
 
 // エントリーファイルをディレクトリ構成ごと取得
@@ -31,22 +28,7 @@ for (const file of cssFiles) {
 }
 
 module.exports = merge(common, {
-  // mode,
-  // devtool: !isProduction ? 'source-map' : false,
   entry,
-  // output: {
-  //   filename: '[name].js',
-  //   path: path.resolve(__dirname, 'dist')
-  // },
-  // resolve: {
-  //   extensions: ['.ts', '.vue'],
-  //   alias: {
-  //     '@scripts': path.resolve(__dirname, 'src/scripts/'),
-  //     '@styles': path.resolve(__dirname, 'src/styles/'),
-  //     '@img': path.resolve(__dirname, 'src/img/'),
-  //     vue$: 'vue/dist/vue.esm.js'
-  //   }
-  // },
   module: {
     rules: [
       {

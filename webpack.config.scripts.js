@@ -17,7 +17,6 @@ const TerserPlugin = require('terser-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 
 // Define
-const mode = process.env.NODE_ENV || 'development';
 const isProduction = process.env.NODE_ENV === 'production';
 
 // エントリーファイルをディレクトリ構成ごと取得
@@ -30,30 +29,8 @@ for (const file of jsFiles) {
   entry[key] = file;
 }
 
-// CSSの対象
-// const cssFiles = glob.sync(`${config.path.src.styles.pages}**/index.+(sass|scss|css)`);
-// for (const file of cssFiles) {
-//   const key = file.replace(config.path.src.root, '').split(/\/index\.(sass|scss|css)/)[0];
-//   entry[key] = file;
-// }
-
 module.exports = merge(common, {
-  // mode,
-  // devtool: !isProduction ? 'source-map' : false,
   entry,
-  // output: {
-  //   filename: '[name].js',
-  //   path: path.resolve(__dirname, 'dist')
-  // },
-  // resolve: {
-  //   extensions: ['.ts', '.vue'],
-  //   alias: {
-  //     '@scripts': path.resolve(__dirname, 'src/scripts/'),
-  //     '@styles': path.resolve(__dirname, 'src/styles/'),
-  //     '@img': path.resolve(__dirname, 'src/img/'),
-  //     vue$: 'vue/dist/vue.esm.js'
-  //   }
-  // },
   module: {
     rules: [
       {

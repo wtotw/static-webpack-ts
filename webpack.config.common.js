@@ -13,23 +13,6 @@ const mode = process.env.NODE_ENV || 'development';
 const isProduction = process.env.NODE_ENV === 'production';
 console.log(`mode: ${mode}`);
 
-// // エントリーファイルをディレクトリ構成ごと取得
-// const entry = {};
-
-// // JS, Vueの対象
-// const jsFiles = glob.sync(`${config.path.src.scripts.pages}**/index.+(ts|tsx|vue)`);
-// for (const file of jsFiles) {
-//   const key = file.replace(config.path.src.root, '').split(/\/index\.(ts|tsx|vue)/)[0];
-//   entry[key] = file;
-// }
-
-// // CSSの対象
-// const cssFiles = glob.sync(`${config.path.src.styles.pages}**/index.+(sass|scss|css)`);
-// for (const file of cssFiles) {
-//   const key = file.replace(config.path.src.root, '').split(/\/index\.(sass|scss|css)/)[0];
-//   entry[key] = file;
-// }
-
 module.exports = {
   mode,
   devtool: !isProduction ? 'source-map' : false,
