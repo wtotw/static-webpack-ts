@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div class="greeting">
       Hello {{ name }}{{ exclamationMarks }}
     </div>
@@ -9,6 +9,9 @@
     <button @click="increment">
       +
     </button>
+    <div class="test">
+      てすと
+    </div>
   </div>
 </template>
 
@@ -42,10 +45,12 @@ export default class HelloDecorator extends Vue {
 <style lang="scss" scoped>
 .greeting {
   font-size: 20px;
+}
 
-  .test {
-    display: inline;
-    background-color: $color_bg_white;
-  }
+.test {
+  display: grid;
+  width: 100px;
+  height: 100px;
+  background-color: #f00;
 }
 </style>
