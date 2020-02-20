@@ -23,11 +23,11 @@ export default class HelloDecorator extends Vue {
 
   enthusiasm = this.initialEnthusiasm;
 
-  increment = (): void => {
+  increment(): void {
     this.enthusiasm += 1;
   }
 
-  decrement = (): void => {
+  decrement(): void {
     if (this.enthusiasm > 1) {
       this.enthusiasm -= 1;
     }
