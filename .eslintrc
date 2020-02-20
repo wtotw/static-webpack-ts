@@ -26,7 +26,11 @@
     "plugin:vue/essential"
   ],
   "settings": {
-    "import/resolver": "webpack"
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.common.js"
+      }
+    }
   },
   "rules": {
     "quotes": [2, "single", {"avoidEscape": true, "allowTemplateLiterals": true}],
