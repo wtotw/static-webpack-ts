@@ -8,11 +8,11 @@ module.exports = {
       img: './src/img/',
       scripts: {
         lib: './src/scripts/lib/',
-        view: './src/scripts/view/'
+        pages: './src/scripts/pages/'
       },
       styles: {
         lib: './src/styles/lib/',
-        view: './src/styles/view/'
+        pages: './src/styles/pages/'
       }
     },
     dist: {
@@ -21,11 +21,11 @@ module.exports = {
       img: './dist/img/',
       scripts: {
         lib: './dist/scripts/lib/',
-        view: './dist/scripts/view/'
+        pages: './dist/scripts/pages/'
       },
       styles: {
         lib: './dist/styles/lib/',
-        view: './dist/styles/view/'
+        pages: './dist/styles/pages/'
       }
     }
   }

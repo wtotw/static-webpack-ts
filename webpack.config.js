@@ -23,14 +23,14 @@ console.log(`mode: ${mode}`);
 const entry = {};
 
 // JS, Vueの対象
-const jsFiles = glob.sync(`${config.path.src.scripts.view}**/index.+(ts|tsx|vue)`);
+const jsFiles = glob.sync(`${config.path.src.scripts.pages}**/index.+(ts|tsx|vue)`);
 for (const file of jsFiles) {
   const key = file.replace(config.path.src.root, '').split(/\/index\.(ts|tsx|vue)/)[0];
   entry[key] = file;
 }
 
 // CSSの対象
-const cssFiles = glob.sync(`${config.path.src.styles.view}**/index.+(sass|scss|css)`);
+const cssFiles = glob.sync(`${config.path.src.styles.pages}**/index.+(sass|scss|css)`);
 for (const file of cssFiles) {
   const key = file.replace(config.path.src.root, '').split(/\/index\.(sass|scss|css)/)[0];
   entry[key] = file;
@@ -170,7 +170,7 @@ module.exports = {
     new StylelintPlugin({
       files: [
         `${config.path.src.styles.lib}**/*`,
-        `${config.path.src.styles.view}**/*`
+        `${config.path.src.styles.pages}**/*`
       ],
       syntax: 'scss'
     }),
