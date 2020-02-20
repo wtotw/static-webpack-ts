@@ -25,6 +25,9 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:vue/essential"
   ],
+  "settings": {
+    "import/resolver": "webpack"
+  },
   "rules": {
     "quotes": [2, "single", {"avoidEscape": true, "allowTemplateLiterals": true}],
     "arrow-body-style": "warn",
