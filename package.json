@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "NODE_ENV=development webpack --watch",
-    "build": "NODE_ENV=development webpack",
-    "release": "NODE_ENV=production webpack",
-    "stylelint": "stylelint --fix ./src/**/*.scss"
+    "watch": "NODE_ENV=development webpack --config webpack.config.scripts.js --watch & NODE_ENV=development webpack --config webpack.config.styles.js --watch",
+    "build": "NODE_ENV=development webpack --config webpack.config.scripts.js && NODE_ENV=development webpack --config webpack.config.styles.js",
+    "release": "NODE_ENV=production webpack --config webpack.config.scripts.js && NODE_ENV=development webpack --config webpack.config.styles.js",
+    "stylelint": "stylelint --fix ./src/**/*.scss",
+    "eslint": "eslint --fix ./src/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -53,7 +54,8 @@
     "vue-loader": "^15.9.0",
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "vue": "^2.6.11",
