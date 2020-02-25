@@ -21,7 +21,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
-    extensions: ['.ts', '.vue'],
+    extensions: ['.js', '.ts', '.vue'],
     alias: {
       '@scripts': path.resolve(__dirname, 'src/scripts/'),
       '@styles': path.resolve(__dirname, 'src/styles/'),
