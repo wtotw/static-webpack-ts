@@ -9,6 +9,7 @@ const glob = require('glob');
 
 // Plugins
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
@@ -108,6 +109,10 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[name].css'
+    }),
+    // JSファイルの除去
+    new FixStyleOnlyEntriesPlugin({
+      extensions: ['sass', 'scss', 'css']
     }),
     // Stylelint
     new StylelintPlugin({
