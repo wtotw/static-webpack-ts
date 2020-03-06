@@ -3,15 +3,10 @@
 //--------------------------
 @charset "UTF-8";
 
-//--------------------------
-// import
-//--------------------------
-// @import '@styles/common/partial/variables/_color';
-
 body {
   display: flex;
   width: 1080px;
-  background-color: $color_bg_white;
+  background-color: $color_base_white;
 
   div.main-content {
     display: grid;

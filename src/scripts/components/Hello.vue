@@ -12,13 +12,28 @@
     <div class="test">
       てすと
     </div>
+    <Button
+      :class="{search: true}"
+      text="検 索"
+      :click-event="buttonAction"
+    />
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
+import Button from '@scripts/components/atoms/Button.vue';
 
-@Component
+@Component({
+  components: {
+    Button
+  },
+  methods: {
+    buttonAction(): void {
+      alert('!!!');
+    }
+  }
+})
 export default class HelloDecorator extends Vue {
   @Prop() name!: string;
 
