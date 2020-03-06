@@ -22,7 +22,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 const entry = {};
 
 // CSSの対象
-const cssFiles = glob.sync(`${config.path.src.styles.pages}**/index.+(sass|scss|css)`);
+const cssFiles = glob.sync(`${config.path.src.root}styles/{common, pages}/**/index.+(sass|scss|css)`);
 for (const file of cssFiles) {
   const key = file.replace(config.path.src.root, '').split(/\/index\.(sass|scss|css)/)[0];
   entry[key] = file;
@@ -34,6 +34,7 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.(sass|scss|css)$/,
+        exclude: /node_modules/,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -61,7 +62,7 @@ module.exports = merge(common, {
           {
             loader: 'sass-resources-loader',
             options: {
-              resources: [`${path.resolve(__dirname, config.path.src.styles.common, 'partial/**/*.scss')}`]
+              resources: [`${path.resolve(__dirname, config.path.src.styles.common, 'partial/variables/**/*.scss')}`]
             }
           }
         ]
