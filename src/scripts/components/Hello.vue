@@ -12,6 +12,13 @@
     <div class="test">
       てすと
     </div>
+    <InputTextWithLabel
+      id="textInput"
+      :label-class="{small: true}"
+      label-text="出発地"
+      :text-class="{}"
+      placeholder="スポット / 駅 / バス停を入力"
+    />
     <Button
       :class="{search: true}"
       text="検 索"
@@ -23,10 +30,12 @@
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
 import Button from '@scripts/components/atoms/Button.vue';
+import InputTextWithLabel from '@scripts/components/molecules/InputTextWithLabel.vue';
 
 @Component({
   components: {
-    Button
+    Button,
+    InputTextWithLabel
   },
   methods: {
     buttonAction(): void {

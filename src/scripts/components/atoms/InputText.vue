@@ -3,7 +3,7 @@
     :id="id"
     class="basic"
     :class="classObject"
-    :value="text"
+    :value="value"
     :name="name"
     :placeholder="placeholder"
     :disabled="disabled"
@@ -16,12 +16,12 @@
 import { Vue, Component, Prop } from 'vue-property-decorator';
 
 @Component
-export default class Button extends Vue {
+export default class InputText extends Vue {
   @Prop() id!: string;
 
   @Prop() classObject!: Record<string, string>;
 
-  @Prop() text!: string;
+  @Prop() value!: string;
 
   @Prop() name!: string;
 
