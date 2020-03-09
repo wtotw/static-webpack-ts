@@ -1,8 +1,10 @@
 <template>
   <input
+    :id="id"
     class="basic"
     :class="classObject"
     :value="text"
+    :name="name"
     :placeholder="placeholder"
     :disabled="disabled"
     @click="clickEvent"
@@ -15,9 +17,13 @@ import { Vue, Component, Prop } from 'vue-property-decorator';
 
 @Component
 export default class Button extends Vue {
+  @Prop() id!: string;
+
   @Prop() classObject!: Record<string, string>;
 
   @Prop() text!: string;
+
+  @Prop() name!: string;
 
   @Prop() placeholder!: string;
 
