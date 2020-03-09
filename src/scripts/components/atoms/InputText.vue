@@ -11,7 +11,6 @@
 </template>
 
 <script lang="ts">
-import 'normalize.css';
 import { Vue, Component, Prop } from 'vue-property-decorator';
 
 @Component
